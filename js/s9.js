@@ -15,7 +15,21 @@ function funcion2(x){
     }
     return ejecutar;
 }
+
+function validar_texto(e){
+    var correo = document.getElementById("correo").value;
+    var caracteres_correo = password.length;
+
+    var formato_correo = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!correo.match(formato_correo)){
+        document.getElementById('correoError').innerHTML = 'Correo inválido';
+
+    }else{
+        document.getElementById('correoError').innerHTML = '';
+    }
     
+}
+
 function validar_formulario(e){
     
     var usuario = document.getElementById("usuario").value;
